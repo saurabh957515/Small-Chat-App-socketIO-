@@ -1,0 +1,15 @@
+doctype html 
+html
+    head
+        title= "Real time web chat"
+        script(src='/chat.js')
+        script(src='/socket.io/socket.io.js')
+    body(style="width:500px;height:400px;margin:52px auto;background-color:lightblue")
+        #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll; background-color:lightgreen')
+        .controls
+            | Name: 
+            input#name(style='width:350px;padding:3px; background-color:yellow;margin:0 0 5px 18px;color:black;font-weight:bold')
+            br
+            | Message :
+            input#field(style='width:350px;padding:3px; background-color:yellow;font-weight:bold')
+            input#send(type='button', value='send',style="padding:3px")
